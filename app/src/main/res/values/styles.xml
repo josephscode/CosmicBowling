@@ -1,0 +1,112 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="BlueText" parent="TextAppearance.AppCompat">
+    <item name="android:gravity">center</item>
+    <item name="android:shadowColor">#00fbff</item>
+    <item name="android:shadowDx">0</item>
+    <item name="android:shadowDy">0</item>
+    <item name="android:shadowRadius">100.0</item>
+    <item name="android:textColor">#00fbff</item>
+    <item name="android:textSize">20sp</item>
+  </style>
+
+  <style name="playerTitle" parent="TextAppearance.AppCompat">
+    <item name="android:gravity">center</item>
+    <item name="android:shadowColor">@color/colorPlayerNameTitles</item>
+    <item name="android:shadowDx">0</item>
+    <item name="android:shadowDy">0</item>
+    <item name="android:shadowRadius">100.0</item>
+    <item name="android:textColor">@color/colorPlayerNameTitles</item>
+    <item name="android:textSize">16sp</item>
+    <!--item name="android:fontFamily">@font/nova_round</item-->
+  </style>
+
+  <style name="playerName" parent="TextAppearance.AppCompat">
+    <item name="android:gravity">center</item>
+    <item name="android:shadowColor">@color/colorPlayerNames</item>
+    <item name="android:shadowDx">0</item>
+    <item name="android:shadowDy">0</item>
+    <item name="android:shadowRadius">100.0</item>
+    <item name="android:textColor">@color/colorPlayerNames</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:background">@drawable/edittext_playernames</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:maxLength">12</item>
+  </style>
+
+  <style name="frameName" parent="TextAppearance.AppCompat">
+    <item name="android:gravity">center</item>
+    <item name="android:shadowColor">@color/colorBlueSpace</item>
+    <item name="android:shadowDx">0</item>
+    <item name="android:shadowDy">0</item>
+    <item name="android:shadowRadius">100.0</item>
+    <item name="android:textColor">@color/colorBlueSpace</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:background">@drawable/frame2</item>
+    <item name="android:layout_marginRight">4dp</item>
+    <item name="android:layout_marginTop">4dp</item>
+    <item name="android:layout_marginBottom">4dp</item>
+  </style>
+
+  <style name="frameScore" parent="TextAppearance.AppCompat">
+    <item name="android:gravity">center</item>
+    <item name="android:shadowColor">#dd2c00</item>
+    <item name="android:shadowDx">0</item>
+    <item name="android:shadowDy">0</item>
+    <item name="android:shadowRadius">90.0</item>
+    <item name="android:textColor">@color/colorFrameScores</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:background">@android:color/transparent</item>
+  </style>
+
+  <style name="totalScoreTitle" parent="TextAppearance.AppCompat">
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:shadowColor">#dd2c00</item>
+    <item name="android:shadowDx">0</item>
+    <item name="android:shadowDy">0</item>
+    <item name="android:shadowRadius">90.0</item>
+    <item name="android:textColor">@color/colorFrames</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:background">@android:color/transparent</item>
+  </style>
+
+  <style name="totalScore" parent="TextAppearance.AppCompat">
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:shadowColor">@color/colorTotalScores</item>
+    <item name="android:shadowDx">0</item>
+    <item name="android:shadowDy">0</item>
+    <item name="android:shadowRadius">100.0</item>
+    <item name="android:textColor">@color/colorTotalScores</item>
+    <item name="android:textSize">34sp</item>
+    <item name="android:background">@android:color/transparent</item>
+  </style>
+
+  <style name="RollButton" parent="android:style/Widget.Button">
+    <item name="colorButtonNormal">#FFFFFF</item>
+    <item name="android:shadowColor">#FFFFFF</item>
+    <item name="android:shadowDx">0</item>
+    <item name="android:shadowDy">0</item>
+    <item name="android:shadowRadius">100.0</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:textAllCaps">true</item>
+  </style>
+
+  <!--Not used-->
+  <!--style name="RollButtonOn" parent="Theme.AppCompat.Light">
+    <item name="colorControlHighlight">@color/colorBlueSpace</item>
+    <item name="colorButtonNormal">#FFFFFF</item>
+    <item name="android:shadowColor">#1eff00</item>
+    <item name="android:shadowDx">0</item>
+    <item name="android:shadowDy">0</item>
+    <item name="android:shadowRadius">90.0</item>
+  </style-->
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#051EB7</color>
+  <color name="colorPrimaryDark">#303F9F</color>
+  <color name="colorAccent">#ff4081</color>
+  <color name="colorBlueSpace">#051EB7</color>
+  <color name="colorButtonEnabled">#11de0e</color>
+  <color name="colorButtonDisabled">#e53935</color>
+  <color name="colorPlayerNames">#64dd17</color>
+  <color name="colorPlayerNameTitles">#ff4081</color>
+  <color name="colorFrames">#ed5524</color>
+  <color name="colorFrameScores">#ffeb3b</color>
+  <color name="colorTotalScores">#ffeb3b</color>
+  <color name="colorSubtitle">#1e88e5</color>
+</resources>

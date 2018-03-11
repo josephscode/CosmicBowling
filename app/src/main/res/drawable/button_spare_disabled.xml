@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <shape android:shape="rectangle">
+      <solid android:color="@color/colorButtonDisabled" />
+      <!--gradient android:angle="0" android:centerColor="@android:color/background_light" android:endColor="@color/colorButtonDisabled" android:gradientRadius="?android:attr/ambientShadowAlpha" android:startColor="@color/colorButtonDisabled" android:type="linear"></gradient-->
+    </shape>
+  </item>
+</selector>

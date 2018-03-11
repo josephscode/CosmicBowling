@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="com.example.android.minicosmicbowl.MainActivity">
+
+  <!--Activity Background-->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlueSpace"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="4"></View>
+
+    <!--Bowling lane image-->
+    <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="6"
+      android:alpha=".4"
+      android:contentDescription="@string/image_contdesc_bowling_lanes"
+      android:scaleType="centerCrop"
+      android:src="@drawable/istock_000010960022small" />
+  </LinearLayout>
+
+  <!--Page Foreground-->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10.50">
+
+    <!--App Title-->
+    <TextView
+      android:id="@+id/app_title"
+      style="@style/BlueText"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:text="@string/app_title"
+      android:textSize="34sp" />
+
+    <!--Play panel-->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="4"
+      android:baselineAligned="false"
+      android:orientation="horizontal"
+      android:weightSum="2">
+
+      //Left side - Player 1
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        //Player 1: Name
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1.5"
+          android:orientation="vertical"
+          android:weightSum="3">
+          //Name title
+          <TextView
+            android:id="@+id/p1_title"
+            style="@style/playerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:labelFor="@id/p1_name"
+            android:text="@string/player_1" />
+          //Name entry + turn indicator
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            //Player's turn
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="center_vertical"
+              android:text="" />
+            <EditText
+              android:id="@+id/p1_name"
+              style="@style/playerName"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="8"
+              android:text="" />
+          </LinearLayout>
+        </LinearLayout>
+
+        <!--Player 1: Scores of frames-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1.5"
+          android:layout_marginTop="8dp"
+          android:layout_marginStart="18dp"
+          android:layout_marginEnd="16dp"
+          android:baselineAligned="false"
+          android:orientation="horizontal"
+          android:weightSum="7">
+          <!--Frame 1-->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:weightSum="3">
+            <!--Frame #-->
+            <TextView
+              android:id="@+id/p1_frame1"
+              style="@style/frameName"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:text="@string/frame_1" />
+            <!--Roll results and frame score-->
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="2"
+              android:layout_marginEnd="4dp"
+              android:background="@drawable/ll_framescore"
+              android:orientation="vertical"
+              android:weightSum="2">
+              <!--Roll results-->
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--Roll 1-->
+                <TextView
+                  android:id="@+id/p1_f1_r1"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:text="" />
+                <!--Roll 2-->
+                <TextView
+                  android:id="@+id/p1_f1_r2"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@drawable/ll_framescore"
+                  android:text="" />
+              </LinearLayout>
+              <!--Frame score-->
+              <TextView
+                android:id="@+id/p1_f1"
+                style="@style/frameScore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="" />
+            </LinearLayout>
+          </LinearLayout>
+
+          <!--Frame 2-->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:weightSum="3">
+            <!--Frame #-->
+            <TextView
+              android:id="@+id/p1_frame2"
+              style="@style/frameName"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:text="@string/frame_2" />
+            <!--Roll results and frame score-->
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="2"
+              android:layout_marginEnd="4dp"
+              android:background="@drawable/ll_framescore"
+              android:orientation="vertical"
+              android:weightSum="2">
+              <!--Roll results-->
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--Roll 1-->
+                <TextView
+                  android:id="@+id/p1_f2_r1"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1" />
+                <!--Roll 2-->
+                <TextView
+                  android:id="@+id/p1_f2_r2"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@drawable/ll_framescore"
+                  android:text="" />
+              </LinearLayout>
+              <!--Frame score-->
+              <TextView
+                android:id="@+id/p1_f2"
+                style="@style/frameScore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="" />
+            </LinearLayout>
+          </LinearLayout>
+
+          <!--Frame 3-->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:weightSum="3">
+            <!--Frame #-->
+            <TextView
+              android:id="@+id/p1_frame3"
+              style="@style/frameName"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:text="@string/frame_3" />
+            <!--Roll results and frame score-->
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="2"
+              android:layout_marginEnd="4dp"
+              android:background="@drawable/ll_framescore"
+              android:orientation="vertical"
+              android:weightSum="2">
+              <!--Roll results-->
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <!--Roll 1-->
+                <TextView
+                  android:id="@+id/p1_f3_r1"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@drawable/ll_framescore"
+                  android:text="" />
+                <!--Roll 2-->
+                <TextView
+                  android:id="@+id/p1_f3_r2"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@drawable/ll_framescore"
+                  android:text="" />
+                <!--Roll 3-->
+                <TextView
+                  android:id="@+id/p1_f3_r3"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@drawable/ll_framescore"
+                  android:text="" />
+              </LinearLayout>
+              <!--Frame score-->
+              <TextView
+                android:id="@+id/p1_f3"
+                style="@style/frameScore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="" />
+            </LinearLayout>
+          </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Player 1: Total score-->
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1">
+          <TextView
+            android:id="@+id/p1"
+            style="@style/totalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="" />
+          <TextView
+            android:id="@+id/p1_total_score"
+            style="@style/totalScoreTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@id/p1"
+            android:text="@string/total" />
+        </RelativeLayout>
+
+      </LinearLayout>
+
+      <!--Right side - Player 2-->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <!--Player 2: Name-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1.5"
+          android:orientation="vertical"
+          android:weightSum="3">
+          <!--Name title-->
+          <TextView
+            android:id="@+id/p2_title"
+            style="@style/playerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:labelFor="@id/p2_name"
+            android:text="@string/player_2" />
+          <!--Name entry + turn indicator-->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <!--Player's turn-->
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="center_vertical"
+              android:text="" />
+            <EditText
+              android:id="@+id/p2_name"
+              style="@style/playerName"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="8"
+              android:text="" />
+          </LinearLayout>
+        </LinearLayout>
+
+        <!--Player 2: Scores of frames-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1.5"
+          android:layout_marginTop="8dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginEnd="16dp"
+          android:baselineAligned="false"
+          android:orientation="horizontal"
+          android:weightSum="7">
+          <!--Frame 1-->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:weightSum="3">
+            <!--Frame #-->
+            <TextView
+              android:id="@+id/p2_frame1"
+              style="@style/frameName"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:text="@string/frame_1" />
+            <!--Roll results and frame score-->
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="2"
+              android:layout_marginEnd="4dp"
+              android:background="@drawable/ll_framescore"
+              android:orientation="vertical"
+              android:weightSum="2">
+              <!--Roll results-->
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--Roll 1-->
+                <TextView
+                  android:id="@+id/p2_f1_r1"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:text="" />
+                <!--Roll 2-->
+                <TextView
+                  android:id="@+id/p2_f1_r2"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@drawable/ll_framescore"
+                  android:text="" />
+              </LinearLayout>
+              <!--Frame score-->
+              <TextView
+                android:id="@+id/p2_f1"
+                style="@style/frameScore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="" />
+            </LinearLayout>
+          </LinearLayout>
+
+          <!--Frame 2-->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:weightSum="3">
+            <!--Frame #-->
+            <TextView
+              android:id="@+id/p2_frame2"
+              style="@style/frameName"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:text="@string/frame_2" />
+            <!--Roll results and frame score-->
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="2"
+              android:layout_marginEnd="4dp"
+              android:background="@drawable/ll_framescore"
+              android:orientation="vertical"
+              android:weightSum="2">
+              <!--Roll results-->
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--Roll 1-->
+                <TextView
+                  android:id="@+id/p2_f2_r1"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1" />
+                <!--Roll 2-->
+                <TextView
+                  android:id="@+id/p2_f2_r2"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@drawable/ll_framescore"
+                  android:text="" />
+              </LinearLayout>
+              <!--Frame score-->
+              <TextView
+                android:id="@+id/p2_f2"
+                style="@style/frameScore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="" />
+            </LinearLayout>
+          </LinearLayout>
+
+          <!--Frame 3-->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:weightSum="3">
+            <!--Frame #-->
+            <TextView
+              android:id="@+id/p2_frame3"
+              style="@style/frameName"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:text="@string/frame_3" />
+            <!--Roll results and frame score-->
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="2"
+              android:layout_marginEnd="4dp"
+              android:background="@drawable/ll_framescore"
+              android:orientation="vertical"
+              android:weightSum="2">
+              <!--Roll results-->
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <!--Roll 1-->
+                <TextView
+                  android:id="@+id/p2_f3_r1"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@drawable/ll_framescore"
+                  android:text="" />
+                <!--Roll 2-->
+                <TextView
+                  android:id="@+id/p2_f3_r2"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@drawable/ll_framescore"
+                  android:text="" />
+                <!--Roll 3-->
+                <TextView
+                  android:id="@+id/p2_f3_r3"
+                  style="@style/frameScore"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@drawable/ll_framescore"
+                  android:text="" />
+              </LinearLayout>
+              <!--Frame score-->
+              <TextView
+                android:id="@+id/p2_f3"
+                style="@style/frameScore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="" />
+            </LinearLayout>
+          </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Player 2: Total score-->
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1">
+          <TextView
+            android:id="@+id/p2"
+            style="@style/totalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="" />
+          <TextView
+            android:id="@+id/p2_total_score"
+            style="@style/totalScoreTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@id/p2"
+            android:text="@string/total" />
+
+        </RelativeLayout>
+
+      </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--Status text-->
+    <TextView
+      android:id="@+id/status_text"
+      style="@style/BlueText"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="0.75"
+      android:text="Enter player names, start game" />
+
+    <!--Roll buttons-->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="4"
+      android:baselineAligned="false"
+      android:orientation="horizontal"
+      android:weightSum="2">
+
+      <!--Left side - Player 1 Rolls-->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="4dp"
+        android:orientation="vertical"
+        android:weightSum="5">
+        <!--Row 1 - 4 Pins-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:orientation="horizontal"
+          android:weightSum="4.5">
+          <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25" />
+          <Button
+            android:id="@+id/p1_7"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_7"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p1_8"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_8"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p1_9"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_9"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p1_X"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_x"
+            android:visibility="invisible" />
+        </LinearLayout>
+        <!--Row 2 - 3 Pins-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:orientation="horizontal"
+          android:weightSum="4.5">
+          <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75" />
+          <Button
+            android:id="@+id/p1_4"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_4"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p1_5"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_5"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p1_6"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_6"
+            android:visibility="invisible" />
+        </LinearLayout>
+        <!--Row 3 - 2 Pins-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:orientation="horizontal"
+          android:weightSum="4.5">
+          <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.25" />
+          <Button
+            android:id="@+id/p1_2"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_rolls_enabled"
+            android:onClick="playRoll"
+            android:text="@string/roll_2"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p1_3"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_3"
+            android:visibility="invisible" />
+        </LinearLayout>
+        <!--Row 4 - 1 Pin-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:orientation="horizontal"
+          android:weightSum="4.5">
+          <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.75" />
+          <Button
+            android:id="@+id/p1_1"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_1"
+            android:visibility="invisible" />
+        </LinearLayout>
+        <!--Spare and Miss-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:layout_marginStart="16dp"
+          android:layout_marginEnd="16dp"
+          android:orientation="horizontal"
+          android:weightSum="4">
+          <!--View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" /-->
+          <Button
+            android:id="@+id/p1_spare"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:onClick="playRoll"
+            android:text="@string/spare"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p1_miss"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:onClick="playRoll"
+            android:text="@string/miss"
+            android:visibility="invisible" />
+        </LinearLayout>
+
+      </LinearLayout>
+
+
+      <!--Right side - Player 2 Rolls-->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="4dp"
+        android:orientation="vertical"
+        android:weightSum="5">
+        <!--Row 1 - 4 Pins-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:orientation="horizontal"
+          android:weightSum="4.5">
+          <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25" />
+          <Button
+            android:id="@+id/p2_7"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_7"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p2_8"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_8"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p2_9"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_9"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p2_X"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_x"
+            android:visibility="invisible" />
+        </LinearLayout>
+        <!--Row 2 - 3 Pins-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:orientation="horizontal"
+          android:weightSum="4.5">
+          <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75" />
+          <Button
+            android:id="@+id/p2_4"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_4"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p2_5"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_5"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p2_6"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_6"
+            android:visibility="invisible" />
+        </LinearLayout>
+        <!--Row 3 - 2 Pins-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:orientation="horizontal"
+          android:weightSum="4.5">
+          <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.25" />
+          <Button
+            android:id="@+id/p2_2"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_rolls_enabled"
+            android:onClick="playRoll"
+            android:text="@string/roll_2"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p2_3"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_3"
+            android:visibility="invisible" />
+        </LinearLayout>
+        <!--Row 4 - 1 Pin-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:orientation="horizontal"
+          android:weightSum="4.5">
+          <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.75" />
+          <Button
+            android:id="@+id/p2_1"
+            style="@style/RollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:onClick="playRoll"
+            android:text="@string/roll_1"
+            android:visibility="invisible" />
+        </LinearLayout>
+        <!--Spare and Miss-->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:layout_marginStart="16dp"
+          android:layout_marginEnd="16dp"
+          android:orientation="horizontal"
+          android:weightSum="4">
+          <!--View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25" /-->
+          <Button
+            android:id="@+id/p2_spare"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:onClick="playRoll"
+            android:text="@string/spare"
+            android:visibility="invisible" />
+          <Button
+            android:id="@+id/p2_miss"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:onClick="playRoll"
+            android:text="@string/miss"
+            android:visibility="invisible" />
+        </LinearLayout>
+
+      </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--Reset button-->
+    <Button
+      android:id="@+id/btn_reset"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="0.75"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      android:onClick="resetGame"
+      android:text="@string/start_reset_game" />
+    <!--LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="0.5"
+      android:orientation="horizontal"
+      android:weightSum="10">
+
+      <TextView
+        android:id="@+id/scoring_rules"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:text="Scoring rules: http://slocums.homestead.com/gamescore.html"
+        android:autoLink="web"
+        android:textColor="@color/colorSubtitle"
+        android:textSize="12sp"
+        />
+
+      <TextView
+        android:id="@+id/player1_previous_frame"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="" />
+      <TextView
+        android:id="@+id/player1_current_frame"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="" />
+      <TextView
+        android:id="@+id/player1_previous_roll"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="" />
+      <TextView
+        android:id="@+id/player1_current_roll"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="" />
+
+
+    </LinearLayout-->
+
+
+  </LinearLayout>
+
+</RelativeLayout>
